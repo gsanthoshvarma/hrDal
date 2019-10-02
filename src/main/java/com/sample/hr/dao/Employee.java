@@ -15,5 +15,7 @@ public interface Employee {
 	public int deleteEmployee(long empId);
 	
 	public void close();
+	
+	public EmployeePO getEmployeeById(int employeeId);
 
 }

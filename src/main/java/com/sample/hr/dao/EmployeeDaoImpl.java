@@ -47,6 +47,13 @@ public class EmployeeDaoImpl implements Employee{
 	@Override
 	public void close() {
 	}
+
+	@Override
+	public EmployeePO getEmployeeById(int employeeId) {
+		LOG.info("getEmployeeById method executed");
+		Session session = sessionFactory.openSession();
+		return (EmployeePO) session.get(EmployeePO.class, employeeId);
+	}
 	
 
 }
